@@ -1,7 +1,14 @@
 <template>
-  <Header/>
+
   <router-view/>
+
+
 </template>
+
+
+<script setup>
+
+</script>
 
 <style>
 #app {
@@ -25,6 +32,3 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 </style>
-<script setup>
-import Header from "@/components/Header-Component.vue";
-</script>
