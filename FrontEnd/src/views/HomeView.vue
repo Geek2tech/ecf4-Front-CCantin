@@ -1,10 +1,10 @@
 <template>
-  <div class="home">
+  <div>
 
-      <HeaderComponent/>
-<h1 class=" centered titreAcceuil">Charles Cantin  Photographe</h1>
-      <FooterComponent/>
-    </div>
+
+    <h1 class=" centered titreAcceuil">Charles Cantin Photographe</h1>
+
+  </div>
 
 </template>
 
@@ -12,25 +12,20 @@
 // @ is an alias to /src
 
 
-import HeaderComponent from "@/components/Header-Component.vue";
-import FooterComponent from "@/components/Footer-Component.vue";
-
 export default {
   name: 'HomeView',
-  components: {FooterComponent, HeaderComponent}
+  components: {}
 }
 </script>
 
 <style scoped>
 
 
-.home{
-  height: 100vh;
-}
-.titreAcceuil{
-  font-size:10em;
+.titreAcceuil {
+  font-size: 10em;
   color: #f9fafbbd;
 }
+
 .centered {
   position: absolute;
   top: 50%;
@@ -38,6 +33,6 @@ export default {
   transform: translate(-50%, -50%);
   width: 100%;
 
- }
+}
 
 </style>

@@ -21,6 +21,6 @@ footer {
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  height: 75px;
+  height: 50px;
 }
 </style>
