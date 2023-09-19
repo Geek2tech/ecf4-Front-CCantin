@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <div class="bg-image" >
+
       <HeaderComponent/>
 <h1 class=" centered titreAcceuil">Charles Cantin  Photographe</h1>
       <FooterComponent/>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -24,13 +24,6 @@ export default {
 <style scoped>
 
 
-.bg-image{
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../../public/Photo_Acceuil.jpg");
-  height: 100%;
-}
 .home{
   height: 100vh;
 }
@@ -46,7 +39,5 @@ export default {
   width: 100%;
 
  }
-nav{
-  background-color: transparent;
-}
+
 </style>

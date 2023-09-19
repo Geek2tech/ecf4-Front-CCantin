@@ -16,14 +16,15 @@
 <script>
 export default {
   name: 'Header-component',
-  components: {}
+  components: {},
+
 }
 </script>
 <style scoped>
 nav {
   display: flex;
   justify-content: space-between;
-  background-color: beige;
+  background-color: transparent;
 }
 
 nav img {
@@ -37,12 +38,12 @@ nav img {
 .HeaderLink a {
   padding: 10px;
   text-decoration: none;
-  color:beige;
+  color:papayawhip;
 }
 
 .HeaderLink a:hover {
   font-size: 1.05em;
-  color: green;
+  color: darkgreen;
   background-color: bisque;
   border-radius: 15px;
   transition-duration: 0.5s;

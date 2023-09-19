@@ -1,7 +1,7 @@
 <template>
-
+<div class="bg-image">
   <router-view/>
-
+  </div>
 
 </template>
 
@@ -30,5 +30,12 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+.bg-image{
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../public/Photo_Acceuil.jpg");
+  height: 100vh;
 }
 </style>
