@@ -37,6 +37,7 @@ nav img {
 .HeaderLink a {
   padding: 10px;
   text-decoration: none;
+  color:beige;
 }
 
 .HeaderLink a:hover {

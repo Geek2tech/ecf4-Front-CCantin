@@ -1,6 +1,8 @@
 <template>
-<footer>
+<footer class="fixed-bottom">
   <div>Numéro</div>
+  <div>FaceBook</div>
+  <div>Instagram</div>
   <div>Email</div>
 </footer>
 </template>
@@ -15,10 +17,10 @@ export default {
 </script>
 
 <style scoped>
-footer{
+footer {
   display: flex;
   justify-content: space-between;
-  background-color: beige;
+  background-color: transparent;
   height: 75px;
 }
 </style>
