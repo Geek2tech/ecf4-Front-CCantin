@@ -1,5 +1,5 @@
 <template>
-<footer class="fixed-bottom">
+<footer class="d-flex justify-content-between bg-transparent p-3 m-3">
   <div>Numéro</div>
   <div>FaceBook</div>
   <div>Instagram</div>
@@ -18,9 +18,7 @@ export default {
 
 <style scoped>
 footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: transparent;
+
   height: 50px;
 }
 </style>

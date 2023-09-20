@@ -6,7 +6,7 @@
     <div class="HeaderLink">
       <router-link to="/">Acceuil</router-link>
       <router-link to="/galerie">Galerie</router-link>
-      <router-link to="/tarifs">Tarifs et prestation</router-link>
+      <router-link to="/tarifs">Prestation</router-link>
       <router-link to="/contact">Contact</router-link>
 
     </div>

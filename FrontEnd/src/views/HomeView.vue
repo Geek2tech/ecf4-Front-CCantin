@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="homePage">
 
 
     <h1 class=" centered titreAcceuil">Charles Cantin Photographe</h1>
@@ -33,6 +33,9 @@ export default {
   transform: translate(-50%, -50%);
   width: 100%;
 
+}
+.homePage{
+  height: 100vh;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="home">
   <HeaderComponent/>
   <router-view/>
   <FooterComponent/>
@@ -22,10 +22,10 @@ import FooterComponent from "@/components/Footer-Component.vue";
   text-align: center;
   color: #2c3e50;
   background-size:cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../public/Assets/Img/fond.jpg");
-  height: 100vh;
+  height: 100%;
 
 }
 

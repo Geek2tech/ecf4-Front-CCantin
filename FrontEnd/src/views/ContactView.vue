@@ -1,10 +1,10 @@
 
 
 <template>
-
+<div class="contatPage">
   <h1>Contact</h1>
-  <div> {{value}} </div>
-
+  <h1> {{value}} </h1>
+</div>
 </template>
 
 <script >
@@ -19,7 +19,7 @@ export default {
       value: process.env.VUE_APP_STRAPI_URL,
 
     }
-  }
+  },
 }
 
 </script>
@@ -28,5 +28,8 @@ export default {
 .HeaderLink a {
 
   color:black;
+}
+.contatPage{
+  height: 100vh;
 }
 </style>
