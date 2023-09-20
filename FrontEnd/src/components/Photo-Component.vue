@@ -2,9 +2,9 @@
   <div>
 
     <img :src=url :value="categorie" :alt="description" class="photo img-fluid">
-    <br>
+    <div id="categorieText">
     {{categorie}}
-
+    </div>
   </div>
   
 </template>
@@ -21,8 +21,12 @@ export default {
 
 </script>
 <style scoped>
-div{
-  color:red;
+#categorieText{
+  color:papayawhip;
+  margin-top: 10px;
+  font-style: italic;
+  font-size : 1.5rem;
+  font-weight: bold;
 }
 .photo{
   border-radius: 20%;
