@@ -1,7 +1,8 @@
 <template>
-  <nav>
-    <div class="logo header">
-      <img src="../../public/Assets/Img/Logo.png" alt="logo">
+  <nav class="navbar justify-content-center justify-content-md-between">
+    <div class="logo header navbar-brand">
+      <img src="../../public/Assets/Img/Logo.png" alt="logo" class="d-inline-block align-center">
+      <span id="texteLogo"><strong>Charles Cantin</strong></span>
     </div>
     <div class="HeaderLink">
       <router-link to="/">Acceuil</router-link>
@@ -23,8 +24,9 @@ export default {
 <style scoped>
 nav {
   display: flex;
-  justify-content: space-between;
+
   background-color: transparent;
+
 }
 
 nav img {
@@ -47,6 +49,11 @@ nav img {
   background-color: bisque;
   border-radius: 15px;
   transition-duration: 0.5s;
+
+}
+#texteLogo{
+  color:papayawhip;
+  padding: 10px;
 
 }
 </style>
