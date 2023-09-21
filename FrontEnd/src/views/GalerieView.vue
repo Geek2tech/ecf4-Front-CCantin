@@ -1,5 +1,5 @@
 <template>
-  <div class="GaleryPage container">
+  <div class="galeryPage container">
     <h1>Galerie</h1>
     <div class="row">
 
@@ -11,8 +11,11 @@
           Filtrer les photos
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <button class="dropdown-item" value="all"  :onclick=photoFilter>Toutes</button>
+          </li>
           <li v-for="categorie in categories" :key="categorie.id">
-            <button class="dropdown-item">{{ categorie }}</button>
+            <button class="dropdown-item" :value=categorie :onclick=photoFilter>{{ categorie }}</button>
           </li>
 
 
@@ -20,7 +23,7 @@
       </div>
     </div>
     <div class="photoContainer row d-flex flex-wrap justify-content-around align-items-baseline">
-      <div v-for="photo in photos" :key="photo.id" class="col-lg-4 col-sm-6  p-3">
+      <div v-for="photo in photos" :key="photo.id" class="col-lg-4 col-sm-6  p-3 photoCompo" :class=photo[0]>
         <PhotoComponent :categorie="photo[0]" :url="photo[1]" :description=photo[2] />
       </div>
 
@@ -47,6 +50,35 @@ export default {
     }
 
   },
+  methods: {
+
+    displayPhoto(liste){
+      for (let i=0 ; i < liste.length; i++){
+        liste[i].classList.remove('hide')
+      }
+    },
+    hidePhoto(liste){
+      for ( let i=0 ; i < liste.length;i++){
+        liste[i].classList.add('hide')
+      }
+    },
+    photoFilter(event) {
+      const filteredCategrie = event.target.value
+      const allPhotos = document.getElementsByClassName('photoCompo')
+      const photoToShow = document.getElementsByClassName(filteredCategrie)
+
+      if (filteredCategrie === 'all'){
+      this.displayPhoto(allPhotos)
+      }
+      else{
+        this.hidePhoto(allPhotos)
+        this.displayPhoto(photoToShow)
+      }
+
+
+    }
+
+  },
   mounted() {
     const requetePhoto = 'http://localhost:1337/api/photos?fields[0]=Description&populate[Photo][fields][0]=url&populate[categorie][fields][1]=categoryName'
     axios
@@ -62,9 +94,11 @@ export default {
             this.photos.push([categorie, url, description])
           })
         })
-        .catch(()=>{
+        .catch(() => {
           alert('une erreur est survenu dans la récupération des données')
         })
+
+
     const requeteCategory = 'http://localhost:1337/api/categories?fields[0]=categoryName'
     axios
         .get(requeteCategory)
@@ -73,9 +107,9 @@ export default {
           responseArray[0].forEach((item) => {
             const categoryName = item.attributes.categoryName
             this.categories.push(categoryName)
-            })
+          })
         })
-        .catch(()=>{
+        .catch(() => {
           alert('une erreur est survenu dans la récupération des données')
         })
 
@@ -94,5 +128,14 @@ div {
 li {
   color: white;
 }
+
+.hide {
+  display: none;
+
+}
+.galeryPage{
+  min-height: calc(100vh - 80px);
+}
+
 
 </style>

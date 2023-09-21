@@ -42,7 +42,17 @@ export default {
   box-shadow: 5px 5px 48px 29px #000000;
 }
 
-@media  ( max-width:575px) {
+
+@media  ( min-width:481px) and (max-width:920px) {
+  .photo:hover {
+    transform: scale(120%);
+    border: 8px solid papayawhip;
+
+  }
+}
+
+
+@media  ( max-width:480px) {
   .photo:hover{
     transform: none;
     border: 8px solid papayawhip;
