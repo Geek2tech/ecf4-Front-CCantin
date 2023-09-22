@@ -80,7 +80,7 @@ export default {
 
   },
   mounted() {
-    const requetePhoto = 'http://localhost:1337/api/photos?fields[0]=Description&populate[Photo][fields][0]=url&populate[categorie][fields][1]=categoryName'
+    const requetePhoto = process.env.VUE_APP_STRAPI_URL + '/api/photos?fields[0]=Description&populate[Photo][fields][0]=url&populate[categorie][fields][1]=categoryName'
     axios
         .get(requetePhoto)
         .then((response) => {
@@ -99,7 +99,7 @@ export default {
         })
 
 
-    const requeteCategory = 'http://localhost:1337/api/categories?fields[0]=categoryName'
+    const requeteCategory = process.env.VUE_APP_STRAPI_URL +'/api/categories?fields[0]=categoryName'
     axios
         .get(requeteCategory)
         .then((response) => {
