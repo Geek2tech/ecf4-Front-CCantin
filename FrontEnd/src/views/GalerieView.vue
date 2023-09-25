@@ -35,7 +35,6 @@
 
 <script>
 import PhotoComponent from "@/components/Photo-Component.vue";
-
 import axios from 'axios'
 
 
@@ -80,9 +79,9 @@ export default {
 
   },
   mounted() {
-    const requetePhoto = process.env.VUE_APP_STRAPI_URL + '/api/photos?fields[0]=Description&populate[Photo][fields][0]=url&populate[categorie][fields][1]=categoryName'
+    const requestPhoto = process.env.VUE_APP_STRAPI_URL + '/api/photos?fields[0]=Description&populate[Photo][fields][0]=url&populate[categorie][fields][1]=categoryName'
     axios
-        .get(requetePhoto)
+        .get(requestPhoto)
         .then((response) => {
           let responseArray = Object.values(response.data)
 
@@ -125,7 +124,7 @@ li {
 }
 
 .galeryPage {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 96px);
 }
 
 

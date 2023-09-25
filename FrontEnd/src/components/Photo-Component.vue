@@ -35,7 +35,7 @@ export default {
 
 }
 .photo:hover{
-
+  z-index:9;
   transform: scale(160%);
   border: 2px solid papayawhip;
   -webkit-box-shadow: 5px 5px 48px 29px #000000;
