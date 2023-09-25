@@ -29,13 +29,14 @@ export default {
   font-weight: bold;
 }
 .photo{
+
   border-radius: 20%;
   border: 8px solid papayawhip;
   transition: all 0.7s ease-in-out;
 
 }
 .photo:hover{
-  z-index:9;
+
   transform: scale(160%);
   border: 2px solid papayawhip;
   -webkit-box-shadow: 5px 5px 48px 29px #000000;

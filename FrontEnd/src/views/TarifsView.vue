@@ -1,5 +1,5 @@
 <template>
-  <div class="ratePage container">
+  <div class="servicePage container">
     <h1>Prestations</h1>
     <img src="../../public/Assets/Img/Logo.png" alt="logo" class="img-fluid logo">
     <div class="serviceContainer row d-flex flex-wrap justify-content-around align-items-center">
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style scoped>
-.ratePage {
+.servicePage {
 
   color: papayawhip;
 }
@@ -59,7 +59,7 @@ margin: 15px;
   margin-bottom: 50px;
 }
 @media (min-width:768px){
-  .ratePage {
+  .servicePage {
     height: 100vh;
   }
 }
