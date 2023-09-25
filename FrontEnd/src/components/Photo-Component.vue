@@ -1,6 +1,6 @@
 <template>
+<!-- affichage d'une photo -->
   <div>
-
     <img :src=url :value="categorie" :alt="description" class="photo img-fluid">
     <div id="categorieText">
     {{categorie}}

@@ -2,7 +2,7 @@
   <div class="galeryPage container">
     <h1>Galerie</h1>
     <div class="row">
-
+      <!-- Menu de filtrage des catégories -->
       <div class="dropdown">
         <button class="btn btn-outline-success btn-lg dropdown-toggle"
                 type="button" id="dropdownMenuButton1"
@@ -12,7 +12,7 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
-            <button class="dropdown-item" value="all"  :onclick=photoFilter>Toutes</button>
+            <button class="dropdown-item" value="all" :onclick=photoFilter>Toutes</button>
           </li>
           <li v-for="categorie in categories" :key="categorie.id">
             <button class="dropdown-item" :value=categorie :onclick=photoFilter>{{ categorie }}</button>
@@ -22,6 +22,7 @@
         </ul>
       </div>
     </div>
+    <!-- appel du composant PhotoComponent pour afficher la photo passer en argument -->
     <div class="photoContainer row d-flex flex-wrap justify-content-around align-items-baseline">
       <div v-for="photo in photos" :key="photo.id" class="col-lg-4 col-sm-6  p-3 photoCompo" :class=photo[0]>
         <PhotoComponent :categorie="photo[0]" :url="photo[1]" :description=photo[2] />
@@ -52,13 +53,13 @@ export default {
   },
   methods: {
 
-    displayPhoto(liste){
-      for (let i=0 ; i < liste.length; i++){
+    displayPhoto(liste) {
+      for (let i = 0; i < liste.length; i++) {
         liste[i].classList.remove('hide')
       }
     },
-    hidePhoto(liste){
-      for ( let i=0 ; i < liste.length;i++){
+    hidePhoto(liste) {
+      for (let i = 0; i < liste.length; i++) {
         liste[i].classList.add('hide')
       }
     },
@@ -67,10 +68,9 @@ export default {
       const allPhotos = document.getElementsByClassName('photoCompo')
       const photoToShow = document.getElementsByClassName(filteredCategrie)
 
-      if (filteredCategrie === 'all'){
-      this.displayPhoto(allPhotos)
-      }
-      else{
+      if (filteredCategrie === 'all') {
+        this.displayPhoto(allPhotos)
+      } else {
         this.hidePhoto(allPhotos)
         this.displayPhoto(photoToShow)
       }
@@ -92,17 +92,15 @@ export default {
             const categorie = item.attributes.categorie.data.attributes.categoryName
             const description = item.attributes.Description
             this.photos.push([categorie, url, description])
-if (!this.categories.includes(categorie)){
-  this.categories.push(categorie)
-}
+            if (!this.categories.includes(categorie)) {
+              this.categories.push(categorie)
+            }
 
           })
         })
         .catch(() => {
           alert('une erreur est survenu dans la récupération des données')
         })
-
-
 
 
   },
@@ -125,7 +123,8 @@ li {
   display: none;
 
 }
-.galeryPage{
+
+.galeryPage {
   min-height: calc(100vh - 80px);
 }
 

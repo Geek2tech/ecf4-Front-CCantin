@@ -1,9 +1,14 @@
 <template>
   <nav class="navbar justify-content-center justify-content-md-between">
+    <!-- Logo et titre de la navBar -->
+
     <div class="logo header navbar-brand">
       <img src="../../public/Assets/Img/Logo.png" alt="logo" class="d-inline-block align-center">
       <span id="texteLogo"><strong>Charles Cantin</strong></span>
     </div>
+
+    <!-- Lien de la navBar -->
+
     <div class="HeaderLink">
       <router-link to="/">Acceuil</router-link>
       <router-link to="/galerie">Galerie</router-link>
