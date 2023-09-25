@@ -92,6 +92,10 @@ export default {
             const categorie = item.attributes.categorie.data.attributes.categoryName
             const description = item.attributes.Description
             this.photos.push([categorie, url, description])
+if (!this.categories.includes(categorie)){
+  this.categories.push(categorie)
+}
+
           })
         })
         .catch(() => {
@@ -99,19 +103,7 @@ export default {
         })
 
 
-    const requeteCategory = process.env.VUE_APP_STRAPI_URL +'/api/categories?fields[0]=categoryName'
-    axios
-        .get(requeteCategory)
-        .then((response) => {
-          let responseArray = Object.values(response.data)
-          responseArray[0].forEach((item) => {
-            const categoryName = item.attributes.categoryName
-            this.categories.push(categoryName)
-          })
-        })
-        .catch(() => {
-          alert('une erreur est survenu dans la récupération des données')
-        })
+
 
   },
 
