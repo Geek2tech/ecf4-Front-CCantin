@@ -54,5 +54,14 @@ Un document PDF est présent sur le repo dans Notice expliquant comment rajouter
 **Pour Lancer le serveur : rpm run serve**
 
 
+# Site de démonstration 
 
+## partie administration du contenu
 
+Adresse de la page d'administration de Strapi : http://admincc.geek2tech.fr
+login : geek2tech@geek2tech.fr
+password : StrapiCC1
+
+## Front
+
+Adresse : http://cmscc.geek2tech.fr
