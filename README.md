@@ -58,10 +58,10 @@ Un document PDF est présent sur le repo dans Notice expliquant comment rajouter
 
 ## partie administration du contenu
 
-* Adresse de la page d'administration de Strapi : http://admincc.geek2tech.fr/admin
+* Adresse de la page d'administration de Strapi : https://admincc.geek2tech.fr/admin
 * login : geek2tech@geek2tech.fr
 * password : StrapiCC1
 
 ## Front
 
-* Adresse : http://cmscc.geek2tech.fr
+* Adresse : https://cmscc.geek2tech.fr
