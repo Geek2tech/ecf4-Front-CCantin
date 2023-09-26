@@ -40,7 +40,7 @@ Un document PDF est présent sur le repo dans Notice expliquant comment rajouter
  * se rendre dans le dossier BackEnd ( cd BackEnd )
  * lancer npm install pour l'installation des dépendances
  * Importer la base de donnée présente dans le dossier BDD sur votre base MariaDB
- * créer un .env à la racine en copien .env.example et en remplacant les données par les bonnes valeurs ( exemple
+ * créer un .env à la racine en copiant .env.example et en remplacant les données par les bonnes valeurs ( exemple
    DATABASE_HOST=IP DE VOTRE SERVEUR par DATABASE_HOST=127.0.0.1 )
 
 **Pour lancer Strapi en mode développement : npm run develop (cela permet l'accès au content builder)**
