@@ -681,13 +681,13 @@ export interface ApiCategorieCategorie extends Schema.CollectionType {
   info: {
     singularName: 'categorie';
     pluralName: 'categories';
-    displayName: 'Categorie';
+    displayName: 'categorie';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    categoryName: Attribute.String & Attribute.Required & Attribute.Unique;
+    categoryName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -699,67 +699,6 @@ export interface ApiCategorieCategorie extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::categorie.categorie',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiEmailEmail extends Schema.SingleType {
-  collectionName: 'emails';
-  info: {
-    singularName: 'email';
-    pluralName: 'emails';
-    displayName: 'Email';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    CC_email: Attribute.Email;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::email.email',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::email.email',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPhonePhone extends Schema.SingleType {
-  collectionName: 'phones';
-  info: {
-    singularName: 'phone';
-    pluralName: 'phones';
-    displayName: 'Phone';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Phone: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::phone.phone',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::phone.phone',
       'oneToOne',
       'admin::user'
     > &
@@ -780,12 +719,12 @@ export interface ApiPhotoPhoto extends Schema.CollectionType {
   };
   attributes: {
     Photo: Attribute.Media & Attribute.Required;
+    Description: Attribute.String;
     categorie: Attribute.Relation<
       'api::photo.photo',
       'oneToOne',
       'api::categorie.categorie'
     >;
-    Description: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -837,36 +776,6 @@ export interface ApiPrestationPrestation extends Schema.CollectionType {
   };
 }
 
-export interface ApiTitreTitre extends Schema.SingleType {
-  collectionName: 'titres';
-  info: {
-    singularName: 'titre';
-    pluralName: 'titres';
-    displayName: 'titre';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Content: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::titre.titre',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::titre.titre',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -884,11 +793,8 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::categorie.categorie': ApiCategorieCategorie;
-      'api::email.email': ApiEmailEmail;
-      'api::phone.phone': ApiPhonePhone;
       'api::photo.photo': ApiPhotoPhoto;
       'api::prestation.prestation': ApiPrestationPrestation;
-      'api::titre.titre': ApiTitreTitre;
     }
   }
 }

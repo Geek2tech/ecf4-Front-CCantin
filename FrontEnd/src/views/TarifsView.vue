@@ -58,9 +58,6 @@ margin: 15px;
   -moz-box-shadow: 12px 8px 115px 0px rgba(225,215,117,0.49);
   margin-bottom: 50px;
 }
-@media (min-width:768px){
-  .servicePage {
-    height: 100vh;
-  }
-}
+
+
 </style>

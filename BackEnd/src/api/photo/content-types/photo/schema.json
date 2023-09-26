@@ -20,13 +20,13 @@
         "images"
       ]
     },
+    "Description": {
+      "type": "string"
+    },
     "categorie": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::categorie.categorie"
-    },
-    "Description": {
-      "type": "string"
     }
   }
 }
