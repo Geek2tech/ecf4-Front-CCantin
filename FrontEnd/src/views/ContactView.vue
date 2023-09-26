@@ -22,7 +22,7 @@
       <textarea rows="5" name=" Le message" id="message" placeholder="" required="" class="form-text"></textarea>
       <input type="hidden" name="_subject" id="email-subject" value="Demande d'information">
     <br>
-    <input type="submit" value="Submit" class="btn  btn-success ">
+    <input type="submit" value="Envoyer" class="btn  btn-success ">
   </form>
 
 
