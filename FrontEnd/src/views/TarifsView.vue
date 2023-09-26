@@ -36,7 +36,7 @@ export default {
             const serviceDescription = item.attributes.Description
 
             this.services.push([serviceName, servicePrice, serviceDescription])
-            console.log(this.services)
+
           })
         }).catch(() => {
       alert('une erreur est survenu dans la récupération des données')
