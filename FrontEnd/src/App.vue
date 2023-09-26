@@ -1,7 +1,18 @@
 <template>
-  <Header/>
+<div id="home">
+  <HeaderComponent/>
   <router-view/>
+  <FooterComponent/>
+  </div>
+
 </template>
+
+
+<script setup>
+
+import HeaderComponent from "@/components/Header-Component.vue";
+import FooterComponent from "@/components/Footer-Component.vue";
+</script>
 
 <style>
 #app {
@@ -10,6 +21,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-size:cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../public/Assets/Img/fond.jpg");
+  height: 100%;
+
 }
 
 nav {
@@ -24,7 +41,8 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+h1{
+  color:white;
+}
 </style>
-<script setup>
-import Header from "@/components/Header-Component.vue";
-</script>

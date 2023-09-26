@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prestations",
+  "info": {
+    "singularName": "prestation",
+    "pluralName": "prestations",
+    "displayName": "Prestation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nomPrestation": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "Tarif": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
