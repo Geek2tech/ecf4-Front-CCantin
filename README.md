@@ -26,7 +26,7 @@ Strapi contient et permet la gestion du contenu. Le front demande les informatio
 
 ## Mode d'emploi
 
-Un document PDF est présent sur le repo dans Notice expliquant comment rajouter ou modifier du contenu (photos et prestations)
+Un document PDF est présent sur le repo "Notice.pdf" expliquant comment rajouter ou modifier du contenu (photos et prestations)
 
 ## Installation en local pour développements et tests
 
