@@ -33,8 +33,8 @@ dependencies:
     specifier: ^5.3.11
     version: 5.3.11(@babel/core@7.23.9)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
   vite:
-    specifier: ^5.1.3
-    version: 5.1.3
+    specifier: ^5.1.7
+    version: 5.1.7
 
 packages:
 
@@ -10655,15 +10655,15 @@ packages:
       terser:
         optional: true
     dependencies:
-      esbuild: 0.19.11
+      esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.12.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: false
 
-  /vite@5.1.3:
-    resolution: {integrity: sha512-UfmUD36DKkqhi/F75RrxvPpry+9+tTkrXfMNZD+SboZqBCMsxKtO52XeGzzuh7ioz+Eo/SYDBbdb0Z7vgcDJew==}
+  /vite@5.1.7:
+    resolution: {integrity: sha512-sgnEEFTZYMui/sTlH1/XEnVNHMujOahPLGMxn1+5sIT45Xjng1Ec1K78jRP15dSmVgg5WBin9yO81j3o9OxofA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
